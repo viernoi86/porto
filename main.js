@@ -1,4 +1,4 @@
-const username = "tonNomGithub"; // ← Remplace par ton pseudo GitHub
+const username = "viernoi86"; // ← Remplace par ton pseudo GitHub
 
 fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
   .then(res => res.json())
