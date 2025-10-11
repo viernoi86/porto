@@ -1,0 +1,141 @@
+/* --- RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- BASE --- */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- HEADER --- */
+header {
+  background: #111;
+  padding: 1rem 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 a {
+  color: #00bfa5;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+nav a.active,
+nav a:hover {
+  color: #00bfa5;
+}
+
+/* --- HERO --- */
+.hero {
+  text-align: center;
+  margin-top: 8vh;
+  flex-grow: 1;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #00bfa5;
+  margin-bottom: 1rem;
+}
+
+.hero h2 span {
+  color: #00bfa5;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #00bfa5;
+  color: #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* --- CONTENT --- */
+.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* --- PROJECTS --- */
+.projects-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 1rem;
+}
+
+.repo-card {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.repo-card:hover {
+  transform: scale(1.03);
+  background: #222;
+}
+
+.repo-card h3 a {
+  color: #00bfa5;
+  text-decoration: none;
+}
+
+.repo-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
